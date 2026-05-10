@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="AbilityLink Global - Accessibility-first employment platform for people with disabilities."
+  />
+
+  <title>AbilityLink Global</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Loading Screen -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-circle"></div>
+  </div>
+
+  <!-- Accessibility Toolbar -->
+  <aside class="accessibility-toolbar" aria-label="Accessibility Toolbar">
+    <button id="increaseFont" aria-label="Increase Font Size">
+      <i class="fa-solid fa-plus"></i>
+    </button>
+
+    <button id="decreaseFont" aria-label="Decrease Font Size">
+      <i class="fa-solid fa-minus"></i>
+    </button>
+
+    <button id="contrastToggle" aria-label="Toggle High Contrast">
+      <i class="fa-solid fa-circle-half-stroke"></i>
+    </button>
+
+    <button id="readingMode" aria-label="Reading Mode">
+      <i class="fa-solid fa-book-open"></i>
+    </button>
+
+    <button id="speechBtn" aria-label="Text To Speech">
+      <i class="fa-solid fa-volume-high"></i>
+    </button>
+
+    <button id="dyslexiaFont" aria-label="Dyslexia Friendly Font">
+      <i class="fa-solid fa-font"></i>
+    </button>
+  </aside>
+
+  <!-- Navbar -->
+  <header class="navbar glass">
+    <div class="logo">
+      <span>AbilityLink</span> Global
+    </div>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#jobs">Jobs</a></li>
+        <li><a href="#recruiters">Recruiters</a></li>
+        <li><a href="#scholarships">Scholarships</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#stories">Success Stories</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+
+    <div class="hero-content" data-aos="fade-right">
+
+      <span class="hero-badge">
+        Inclusive Global Employment Ecosystem
+      </span>
+
+      <h1>
+        Talent Has No Disability.
+      </h1>
+
+      <p>
+        Discover remote jobs, accessible workplaces, inclusive companies,
+        scholarships, internships, mentors, and global recruiters designed
+        for people with disabilities.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#jobs" class="primary-btn">
+          Search Jobs
+        </a>
+
+        <a href="#recruiters" class="secondary-btn">
+          Find Recruiters
+        </a>
+      </div>
+
+      <div class="hero-stats">
+
+        <div class="stat-card">
+          <h2 class="counter" data-target="15000">0</h2>
+          <p>Accessible Jobs</p>
+        </div>
+
+        <div class="stat-card">
+          <h2 class="counter" data-target="1200">0</h2>
+          <p>Inclusive Companies</p>
+        </div>
+
+        <div class="stat-card">
+          <h2 class="counter" data-target="85">0</h2>
+          <p>Countries</p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="hero-image" data-aos="fade-left">
+      <img
+        src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200"
+        alt="Inclusive workplace illustration"
+        loading="lazy"
+      />
+    </div>
+
+  </section>
+
+  <!-- Search Section -->
+  <section class="job-search-section" id="jobs">
+
+    <div class="section-title">
+      <h2>Find Inclusive Opportunities</h2>
+      <p>
+        Verified global opportunities from accessibility-first employers.
+      </p>
+    </div>
+
+    <div class="search-box glass">
+
+      <input
+        type="text"
+        id="jobSearch"
+        placeholder="Search jobs, companies, skills..."
+        aria-label="Search Jobs"
+      />
+
+      <select id="jobFilter" aria-label="Filter Jobs">
+        <option value="all">All Jobs</option>
+        <option value="remote">Remote</option>
+        <option value="internship">Internship</option>
+        <option value="wheelchair">Wheelchair Accessible</option>
+        <option value="neurodivergent">Neurodivergent Friendly</option>
+      </select>
+
+    </div>
+
+    <div class="jobs-grid">
+
+      <!-- Job Card -->
+      <article class="job-card glass" data-category="remote">
+
+        <div class="verified">
+          <i class="fa-solid fa-badge-check"></i> Verified
+        </div>
+
+        <h3>Accessibility Program Manager</h3>
+
+        <p class="company">
+          Microsoft
+        </p>
+
+        <div class="job-meta">
+          <span><i class="fa-solid fa-location-dot"></i> Remote</span>
+          <span><i class="fa-solid fa-money-bill"></i> $90k-$120k</span>
+        </div>
+
+        <p class="job-desc">
+          Lead accessibility initiatives and build inclusive experiences for global users.
+        </p>
+
+        <div class="tags">
+          <span>Remote</span>
+          <span>Accessible Office</span>
+          <span>Assistive Tech</span>
+        </div>
+
+        <a
+          href="https://careers.microsoft.com/"
+          target="_blank"
+          class="apply-btn"
+          rel="noopener"
+        >
+          Apply Now
+        </a>
+
+      </article>
+
+      <!-- Job -->
+      <article class="job-card glass" data-category="internship">
+
+        <div class="verified">
+          <i class="fa-solid fa-badge-check"></i> Verified
+        </div>
+
+        <h3>Inclusive UX Design Intern</h3>
+
+        <p class="company">
+          Google
+        </p>
+
+        <div class="job-meta">
+          <span><i class="fa-solid fa-location-dot"></i> Hybrid</span>
+          <span><i class="fa-solid fa-money-bill"></i> Paid Internship</span>
+        </div>
+
+        <p class="job-desc">
+          Design accessible experiences with inclusive product teams.
+        </p>
+
+        <div class="tags">
+          <span>Internship</span>
+          <span>Neurodivergent Friendly</span>
+        </div>
+
+        <a
+          href="https://careers.google.com/"
+          target="_blank"
+          class="apply-btn"
+          rel="noopener"
+        >
+          Apply Now
+        </a>
+
+      </article>
+
+      <!-- Job -->
+      <article class="job-card glass" data-category="wheelchair">
+
+        <div class="verified">
+          <i class="fa-solid fa-badge-check"></i> Verified
+        </div>
+
+        <h3>Remote Customer Success Specialist</h3>
+
+        <p class="company">
+          Salesforce
+        </p>
+
+        <div class="job-meta">
+          <span><i class="fa-solid fa-location-dot"></i> Work From Home</span>
+          <span><i class="fa-solid fa-money-bill"></i> $70k-$95k</span>
+        </div>
+
+        <p class="job-desc">
+          Help customers succeed while working within an accessibility-first environment.
+        </p>
+
+        <div class="tags">
+          <span>Wheelchair Accessible</span>
+          <span>Remote</span>
+        </div>
+
+        <a
+          href="https://careers.salesforce.com/"
+          target="_blank"
+          class="apply-btn"
+          rel="noopener"
+        >
+          Apply Now
+        </a>
+
+      </article>
+
+    </div>
+
+  </section>
+
+  <!-- Recruiters -->
+  <section class="recruiters" id="recruiters">
+
+    <div class="section-title">
+      <h2>Global Recruiters & Inclusive Employers</h2>
+      <p>
+        Trusted organizations actively supporting disability inclusion.
+      </p>
+    </div>
+
+    <div class="recruiter-grid">
+
+      <div class="recruiter-card glass">
+
+        <img
+          src="https://cdn.simpleicons.org/microsoft/white"
+          alt="Microsoft logo"
+          loading="lazy"
+        />
+
+        <h3>Microsoft Careers</h3>
+
+        <p>Accessibility Hiring Program</p>
+
+        <a
+          href="https://careers.microsoft.com/"
+          target="_blank"
+          rel="noopener"
+        >
+          Visit Careers
+        </a>
+
+      </div>
+
+      <div class="recruiter-card glass">
+
+        <img
+          src="https://cdn.simpleicons.org/google/white"
+          alt="Google logo"
+          loading="lazy"
+        />
+
+        <h3>Google Careers</h3>
+
+        <p>Inclusive Innovation Hiring</p>
+
+        <a
+          href="https://careers.google.com/"
+          target="_blank"
+          rel="noopener"
+        >
+          Visit Careers
+        </a>
+
+      </div>
+
+      <div class="recruiter-card glass">
+
+        <img
+          src="https://cdn.simpleicons.org/amazon/white"
+          alt="Amazon logo"
+          loading="lazy"
+        />
+
+        <h3>Amazon Jobs</h3>
+
+        <p>Accessible Workplace Programs</p>
+
+        <a
+          href="https://www.amazon.jobs/"
+          target="_blank"
+          rel="noopener"
+        >
+          Visit Careers
+        </a>
+
+      </div>
+
+      <div class="recruiter-card glass">
+
+        <img
+          src="https://cdn.simpleicons.org/ibm/white"
+          alt="IBM logo"
+          loading="lazy"
+        />
+
+        <h3>IBM Careers</h3>
+
+        <p>Neurodiversity Hiring Initiative</p>
+
+        <a
+          href="https://www.ibm.com/careers/"
+          target="_blank"
+          rel="noopener"
+        >
+          Visit Careers
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- AI Features -->
+  <section class="ai-section">
+
+    <div class="section-title">
+      <h2>AI Career Intelligence</h2>
+      <p>
+        Smart tools built to empower your professional journey.
+      </p>
+    </div>
+
+    <div class="ai-grid">
+
+      <div class="ai-card glass">
+        <i class="fa-solid fa-file-lines"></i>
+        <h3>Resume Analyzer</h3>
+        <p>
+          Improve your resume using AI-powered insights.
+        </p>
+      </div>
+
+      <div class="ai-card glass">
+        <i class="fa-solid fa-robot"></i>
+        <h3>Interview Chatbot</h3>
+        <p>
+          Practice interviews with accessibility-aware AI.
+        </p>
+      </div>
+
+      <div class="ai-card glass">
+        <i class="fa-solid fa-lightbulb"></i>
+        <h3>Career Suggestions</h3>
+        <p>
+          Discover careers aligned with your strengths.
+        </p>
+      </div>
+
+      <div class="ai-card glass">
+        <i class="fa-solid fa-universal-access"></i>
+        <h3>Accommodation Advisor</h3>
+        <p>
+          Get recommendations for workplace accommodations.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Scholarships -->
+  <section class="scholarships" id="scholarships">
+
+    <div class="section-title">
+      <h2>Scholarships & Education</h2>
+      <p>
+        Financial support and growth opportunities worldwide.
+      </p>
+    </div>
+
+    <div class="resource-grid">
+
+      <div class="resource-card glass">
+        <h3>Google Lime Scholarship</h3>
+        <a href="https://www.limeconnect.com/" target="_blank">
+          Apply
+        </a>
+      </div>
+
+      <div class="resource-card glass">
+        <h3>Microsoft Disability Scholarship</h3>
+        <a href="https://www.microsoft.com/" target="_blank">
+          Apply
+        </a>
+      </div>
+
+      <div class="resource-card glass">
+        <h3>Coursera Free Courses</h3>
+        <a href="https://www.coursera.org/" target="_blank">
+          Explore
+        </a>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Success Stories -->
+  <section class="stories" id="stories">
+
+    <div class="section-title">
+      <h2>Success Stories</h2>
+      <p>
+        Inspiring journeys from professionals around the globe.
+      </p>
+    </div>
+
+    <div class="story-card glass">
+
+      <p>
+        “AbilityLink helped me secure a fully remote accessibility consulting role
+        after years of struggling with inaccessible hiring systems.”
+      </p>
+
+      <h4>- Sarah, Canada</h4>
+
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+
+    <div class="footer-grid">
+
+      <div>
+        <h3>AbilityLink Global</h3>
+        <p>
+          Empowering talent without barriers.
+        </p>
+      </div>
+
+      <div>
+        <h4>Resources</h4>
+
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Accessibility Statement</a></li>
+          <li><a href="#">GDPR Compliance</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Platforms</h4>
+
+        <ul>
+          <li><a href="https://www.linkedin.com/jobs/" target="_blank">LinkedIn Jobs</a></li>
+          <li><a href="https://www.indeed.com/" target="_blank">Indeed</a></li>
+          <li><a href="https://remoteok.com/" target="_blank">RemoteOK</a></li>
+          <li><a href="https://abilityjobs.com/" target="_blank">AbilityJobs</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      © 2026 AbilityLink Global — Accessibility First.
+    </div>
+
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
