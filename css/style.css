@@ -1,4 +1,7 @@
-:root{
+│
+├── assets/
+│   ├── images/
+│   └── logos/:root{
   --bg:#07111f;
   --card:#0f1d32;
   --text:#ffffff;
