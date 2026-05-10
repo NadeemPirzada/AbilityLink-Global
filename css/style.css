@@ -346,3 +346,240 @@ a{
     flex-direction:column;
   }
 }
+/* ===================================
+   PREMIUM UI UPGRADE
+=================================== */
+
+/* Animated background */
+
+body::before {
+  content: '';
+
+  position: fixed;
+  inset: 0;
+
+  background:
+    radial-gradient(circle at 10% 20%,
+      rgba(0,212,255,0.10),
+      transparent 25%),
+
+    radial-gradient(circle at 90% 80%,
+      rgba(108,99,255,0.15),
+      transparent 30%);
+
+  z-index: -1;
+}
+
+/* Navbar Enhancement */
+
+.navbar {
+  border-radius: 0 0 24px 24px;
+
+  margin: 0 20px;
+
+  top: 12px;
+
+  width: calc(100% - 40px);
+
+  box-shadow:
+    0 10px 40px rgba(0,0,0,0.25);
+}
+
+/* Hero Upgrade */
+
+.hero {
+  position: relative;
+}
+
+.hero h1 {
+  font-size: 5rem;
+  font-weight: 800;
+
+  letter-spacing: -2px;
+
+  max-width: 950px;
+  margin: auto auto 25px;
+}
+
+.hero p {
+  max-width: 760px;
+
+  margin: auto auto 40px;
+
+  font-size: 1.2rem;
+
+  opacity: 0.85;
+}
+
+/* Gradient Glow */
+
+.hero h1 span {
+  background:
+    linear-gradient(
+      90deg,
+      #00d4ff,
+      #7f5af0,
+      #6c63ff
+    );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Better Buttons */
+
+.btn,
+.apply-btn {
+  position: relative;
+
+  overflow: hidden;
+
+  border: none;
+}
+
+.btn::before,
+.apply-btn::before {
+  content: '';
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      120deg,
+      transparent,
+      rgba(255,255,255,0.25),
+      transparent
+    );
+
+  transform: translateX(-100%);
+
+  transition: 0.6s;
+}
+
+.btn:hover::before,
+.apply-btn:hover::before {
+  transform: translateX(100%);
+}
+
+/* Better Cards */
+
+.job-card,
+.recruiter-card,
+.resource-card {
+  position: relative;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,0.08),
+      rgba(255,255,255,0.03)
+    );
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+}
+
+.job-card::before,
+.recruiter-card::before,
+.resource-card::before {
+  content: '';
+
+  position: absolute;
+
+  top: -100px;
+  right: -100px;
+
+  width: 220px;
+  height: 220px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(0,212,255,0.15),
+      transparent 70%
+    );
+}
+
+/* Card Hover */
+
+.job-card:hover,
+.recruiter-card:hover,
+.resource-card:hover {
+  transform:
+    translateY(-12px)
+    scale(1.02);
+
+  box-shadow:
+    0 20px 50px rgba(0,0,0,0.35);
+
+  border-color:
+    rgba(0,212,255,0.25);
+}
+
+/* Section Spacing */
+
+section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+/* Better Section Titles */
+
+.section-title h2 {
+  font-size: 3rem;
+
+  font-weight: 800;
+
+  margin-bottom: 18px;
+}
+
+.section-title p {
+  font-size: 1.1rem;
+
+  max-width: 700px;
+
+  margin: auto;
+
+  opacity: 0.8;
+}
+
+/* Footer */
+
+footer {
+  margin-top: 100px;
+
+  background:
+    rgba(255,255,255,0.03);
+
+  backdrop-filter: blur(14px);
+}
+
+/* Smooth Animation */
+
+.job-card,
+.recruiter-card,
+.resource-card,
+.btn,
+.apply-btn,
+.nav-links a {
+  transition:
+    all 0.35s ease;
+}
+
+/* Mobile */
+
+@media(max-width: 768px) {
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .navbar {
+    margin: 10px;
+    width: calc(100% - 20px);
+  }
+
+}
